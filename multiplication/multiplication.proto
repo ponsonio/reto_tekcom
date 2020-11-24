@@ -1,0 +1,15 @@
+syntax = "proto3";
+package multiplication;
+
+message Result {
+  string body = 1;
+}
+
+message Factors {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+service MultiplicationService {
+  rpc Multiply(Factors) returns (Result) {}
+}
